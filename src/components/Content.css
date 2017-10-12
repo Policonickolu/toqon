@@ -1,0 +1,23 @@
+.Table {
+  position: fixed;
+  top: 80px;
+  left: 260px;
+  right: 315px;
+  bottom:0px;
+
+  background-color: rgb(252,252,252);
+}
+
+.Table-panel {
+  height: 100%;
+  overflow-y: scroll;
+  margin-right:-17px; 
+}
+
+.Table-wrap {
+  margin: 50px auto;
+  width: 560px;
+}
+
+
+

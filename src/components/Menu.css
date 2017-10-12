@@ -1,0 +1,67 @@
+.Menu {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+
+  width: 260px;
+  height: 100%;
+  
+  color: rgb(141,149,160);
+  background-color: rgb(62,71,80);
+
+}
+
+.Menu-header {
+  
+  height: 80px;
+
+  color: white;
+  background-color: rgb(54,61,69);  
+
+}
+
+.Menu-title {
+  
+  text-align: left;
+
+  padding-top: 32px;
+  padding-left: 52px;
+
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Intro Bold Alt", Arial, sans-serif;
+
+}
+
+.Menu ul {
+  list-style-type: none;
+  text-align: left;
+  font-size: 12px;
+
+  margin: 0px;
+  padding: 30px 0px 15px 0px;
+
+}
+
+.Menu ul:not(:last-of-type) {
+  border-bottom: 1px solid rgb(73,82,91);
+}
+
+.Menu ul li {
+  padding-left: 52px;
+  padding-bottom: 20px;
+}
+
+.Menu a {
+  text-decoration: none;
+  color: rgb(141,149,160);
+}
+
+.Menu-button {
+  color: rgb(151,194,211);
+  border: 1px solid rgb(151,194,211);
+  padding: 10px 0px 10px 0px;
+  margin: 0px 30px 0px 30px;
+  border-radius: 5px;
+  text-align: center;
+}

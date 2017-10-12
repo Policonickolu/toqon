@@ -1,0 +1,44 @@
+.Transaction {
+  border-bottom: 1px solid rgb(204,204,204);
+
+  display: flex;
+  flex-direction: row;
+
+  height: 60px;
+  width: 560px;
+}
+
+.Transaction:first-of-type {
+  border-bottom: 1px solid rgb(136,136,136);
+}
+
+.Transaction div {
+  margin: auto 0;
+}
+
+.Trans-date {
+  width: 100px;
+  text-align: left;
+}
+
+.Trans-cp {
+  width: 180px;
+  text-align: left;
+}
+
+.Trans-payment {
+  width: 100px;
+  text-align: left;
+}
+.Trans-amount {
+  width: 130px;
+  text-align: right;  
+}
+.Trans-attach {
+  width: 50px; 
+  text-align: right; 
+}
+
+.Trans-attach a {
+  text-decoration: none;
+}

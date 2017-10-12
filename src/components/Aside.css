@@ -1,0 +1,26 @@
+.Aside {
+  width: 315px;
+  height: 100%;
+
+
+  position: fixed;
+  right: 0px;
+  top: 0px;
+
+  color: rgb(136,136,136);
+  background-color: rgb(255,255,255);
+
+}
+
+.Aside-header {
+  height: 80px;
+  width: 100%;
+  background-color: rgb(246,246,246);
+}
+
+.Aside-message {
+  text-align: center;
+  margin: 275px auto;
+  width: 200px;
+
+}
