@@ -1,3 +1,24 @@
+## Getting Started
+
+### Installing
+
+```
+git clone https://github.com/Policonickolu/tonqo.git
+```
+```
+cd tonqo
+```
+```
+npm install
+```
+
+## Running
+
+```
+npm start
+```
+~~~~~~~~~~~~~~~~~~~~~~é
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
