@@ -33,6 +33,11 @@
 
 }
 
+.Menu-title a {
+  text-decoration: none;
+  color: rgb(255,255,255);  
+}
+
 .Menu ul {
   list-style-type: none;
   text-align: left;
@@ -52,7 +57,7 @@
   padding-bottom: 20px;
 }
 
-.Menu a {
+.Menu ul a {
   text-decoration: none;
   color: rgb(141,149,160);
 }

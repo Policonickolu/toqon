@@ -8,7 +8,7 @@ export default class Menu extends Component {
     return (
       <div className="Menu">
         <div className="Menu-header">
-          <div className="Menu-title">FINPAL</div>
+          <div className="Menu-title"><Link to="/">FINPAL</Link></div>
         </div>
         <ul>
           <li>Overview</li>

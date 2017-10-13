@@ -3,7 +3,6 @@ import './App.css'
 
 import Menu from './Menu'
 import Main from './Main'
-import Aside from './Aside'
 
 export default class App extends Component {
   render() {
@@ -11,7 +10,6 @@ export default class App extends Component {
       <div className="App">
         <Menu/>
         <Main/>
-        <Aside/>
       </div>
     );
   }
