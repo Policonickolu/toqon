@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 
 import './Main.css';
-import Content from './Content';
+
+import TransactionPage from './TransactionPage';
 
 
 export default class Main extends Component {
@@ -10,7 +11,7 @@ export default class Main extends Component {
     return (
       <div className="Main">
         <div className="Main-header"></div>
-        <Route path="/transactions" component={Content} />
+        <Route path="/transactions" component={TransactionPage} />
       </div>
     );
   }

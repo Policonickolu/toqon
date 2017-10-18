@@ -1,4 +1,4 @@
-.Table {
+.Content {
   position: fixed;
   top: 80px;
   left: 260px;
@@ -6,12 +6,17 @@
   bottom:0px;
 
   background-color: rgb(252,252,252);
+
+
 }
 
-.Table-panel {
+.Table {
   height: 100%;
   overflow-y: scroll;
   margin-right:-17px; 
+
+  user-select: none;
+
 }
 
 .Table-wrap {

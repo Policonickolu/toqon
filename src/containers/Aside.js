@@ -17,7 +17,19 @@ export default class Aside extends Component {
 
       let det = this.props.data.details
   
-      display = <ul><h3>Selected Transaction</h3><li>{det.date}</li><li>{det.counterparty}</li><li>{det.payment}</li><li>{det.amount}</li><li><a href={det.attachements}><span>📎</span></a></li></ul>
+      display = <ul><h3>Selected Transaction</h3>
+                  <li>{det.date}</li>
+                  <li>{det.counterparty}</li>
+                  <li>{det.payment}</li>
+                  <li>{det.amount}</li>
+                  <li>
+                    { 
+                      det.attachements.map( (a, i) => {
+                        return <div><a href={a.url}><span>📎</span></a> {i+1}</div>
+                      })
+                    }
+                  </li>
+                </ul>
     
     }else{
 

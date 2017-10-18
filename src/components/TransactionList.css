@@ -1,0 +1,92 @@
+.TransactionList {
+  border-bottom: 1px solid rgb(204,204,204);
+  border-collapse: collapse;
+  margin: auto 0;
+  white-space: nowrap;
+}
+
+.TransactionList th {
+  border-bottom: 1px solid rgb(136,136,136);
+  font-weight: 100;
+}
+
+.TransactionList td {
+  border-bottom: 1px solid rgb(204,204,204);
+}
+
+.TransactionList .counterparty {
+  min-width: 180px;
+}
+
+.TransactionList .amount {
+  text-align: right;
+}
+
+.TransactionList td.amount {
+  font-weight: 600;
+}
+
+.TransactionList th, td {
+  text-align: left;
+  height:40px;
+}
+
+.TransactionList .date, .counterparty, .payment, .arrow {
+  padding-right: 20px;
+}
+
+.TransactionList a {
+  text-decoration: none;
+}
+
+.TransactionList td .arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  
+  border-bottom: 8px solid rgb(143,201,213);
+
+  position: relative;
+  bottom: 15px;
+  margin: 5px;
+}
+
+.TransactionList td .arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  
+  border-top: 8px solid rgb(233,95,95);
+
+  position: relative;
+  top: 12px;
+  margin: 5px;
+}
+
+.TransactionList th .arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  
+  border-bottom: 8px solid rgb(239,178,71);
+
+  position: relative;
+  bottom: 15px;
+  margin: 5px;
+}
+
+.TransactionList th .arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  
+  border-top: 8px solid rgb(239,178,71);
+
+  position: relative;
+  top: 12px;
+  margin: 5px;
+}

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './App.css'
 
-import Menu from './Menu'
+import Menu from '../components/Menu'
 import Main from './Main'
 
 export default class App extends Component {
