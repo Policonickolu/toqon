@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
+
 import './TransactionList.css'
 
+import AmountContainer from '../containers/AmountContainer'
 
-export default class Transaction extends Component {
+
+export default class TransactionList extends Component {
   
 
   render() {
-
-
 
     var arrows = {}
 
@@ -40,7 +41,6 @@ export default class Transaction extends Component {
               {arrows.amount}              
               Amount
           </th>
-          <th className="arrow"></th>
           <th className="attachements"><span>📎</span></th>
         </tr>
         {
@@ -59,9 +59,8 @@ export default class Transaction extends Component {
                       <td className="date">{t.date}</td>
                       <td className="counterparty">{t.counterparty}</td>
                       <td className="payment">{t.payment}</td>
-                      <td className="amount">{t.amount}</td>
-                      <td className="arrow"><span className="arrow-up" onClick={(e) => (e.stopPropagation())}></span></td>
-                      <td className="attachements">
+                      <AmountContainer euro={t.amount} gbp={t.gbp} />
+                      <td className="attachements" style={{fontWeight:"100"}}>
                         { 
                           t.attachements.map( (a, i) => {
                             return <div><a href={a.url}><span>📎</span></a> {i+1}</div>

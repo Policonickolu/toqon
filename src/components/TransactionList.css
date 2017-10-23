@@ -14,25 +14,34 @@
   border-bottom: 1px solid rgb(204,204,204);
 }
 
+.TransactionList .date {
+  min-width: 90px;
+}
+
 .TransactionList .counterparty {
   min-width: 180px;
 }
 
-.TransactionList .amount {
-  text-align: right;
-}
-
-.TransactionList td.amount {
-  font-weight: 600;
+.TransactionList .payment {
+  min-width: 125px;
 }
 
 .TransactionList th, td {
   text-align: left;
-  height:40px;
+  height: 70px;
 }
 
-.TransactionList .date, .counterparty, .payment, .arrow {
+.TransactionList .date, .counterparty, .payment {
   padding-right: 20px;
+}
+
+.TransactionList th.amount {
+  text-align: right;
+  padding-right: 45px;
+}
+
+.TransactionList .attachements span {
+  color: rgb(141,141,141);
 }
 
 .TransactionList a {

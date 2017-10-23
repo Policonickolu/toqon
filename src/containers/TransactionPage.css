@@ -1,12 +1,10 @@
-.Content {
+.Page {
   position: fixed;
   top: 80px;
   left: 260px;
   right: 315px;
   bottom:0px;
-
   background-color: rgb(252,252,252);
-
 
 }
 

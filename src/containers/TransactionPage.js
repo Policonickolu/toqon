@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
 
 import './TransactionPage.css';
-
-import transactionsAPI from '../api'
+import {transactionsAPI, euroToGbp} from '../api'
 import TransactionList from '../components/TransactionList'
-import Aside from './Aside'
+import Aside from '../components/Aside'
 
 
-export default class Content extends Component {
+export default class TransactionPage extends Component {
   
   constructor(props){
     super(props)
@@ -58,13 +57,17 @@ export default class Content extends Component {
     let res = await transactionsAPI()
     res.transactions.sort(this.sort(this.state.sortedBy, this.state.asc))
 
-    // We do as if the 3 last transactions are new
+    // We do as if the 3 last transactions were new
 
     res.transactions[0].recent = true
     res.transactions[1].recent = true
     res.transactions[2].recent = true
 
     /////
+
+    res.transactions.map( (t) => {
+      return t.gbp = euroToGbp(t.amount)
+    })
 
     this.setState({
       transactions: res.transactions
@@ -88,10 +91,16 @@ export default class Content extends Component {
   }
 
   handleClick(e){
-      
-    var id = e.target.parentNode.attributes.index || e.target.attributes.index
     
-    id = id.value
+    var target = e.target;
+
+    while(!target.attributes.index) {
+
+      target = target.parentNode
+
+    }
+
+    var id = target.attributes.index.value
 
 
     var shiftKey = e.shiftKey
@@ -127,19 +136,24 @@ export default class Content extends Component {
   render() {
 
     var transactions = this.state.transactions.map(function(t, index){
-    var amount = (t.debit ? '− ' : '+ ') + (Math.abs(t.amount) + ' ').replace('.',',') + t.currency
-    var date = new Date(t.created_at).toLocaleDateString()
+
+      var amount = (t.debit ? '− ' : '+ ') + (Math.abs(t.amount) + ' ').replace('.',',') + t.currency
+      var gbp = (t.debit ? '− ' : '+ ') + (Math.abs(t.gbp) + ' ').replace('.',',') + " GBP"
+      var date = new Date(t.created_at).toLocaleDateString().replace(/\//g,'-')
+      
       return {
         key           : index,
         index         : t.id,
         date          : date,
         counterparty  : t.counterparty_name,
         amount        : amount,
+        gbp           : gbp,
         payment       : t.operation_type,
         attachements  : t.attachements,
         selected      : this.state.selected.includes(t.id),
         recent        : t.recent
       }
+      
     }.bind(this))
 
 

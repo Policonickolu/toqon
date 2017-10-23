@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom'
 
 import './Main.css';
-
 import TransactionPage from './TransactionPage';
 
 
