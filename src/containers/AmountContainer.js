@@ -19,8 +19,6 @@ export default class AmountContainer extends Component {
   handleClick(e){
     e.stopPropagation()
 
-    console.log("lol")
-
     this.setState( prevState => ({ toggled: !prevState.toggled }) )
 
   }
