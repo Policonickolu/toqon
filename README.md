@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Getting Started
 
 ### Installing
@@ -2184,6 +2183,3 @@ To resolve this:
 ## Something Missing?
 
 If you have ideas for more “How To” recipes that should be on this page, [let us know](https://github.com/facebookincubator/create-react-app/issues) or [contribute some!](https://github.com/facebookincubator/create-react-app/edit/master/packages/react-scripts/template/README.md)
-=======
-# qonto
->>>>>>> c083a25283e0b7fb805d996c2c5ec72ef4891cf0
