@@ -10,37 +10,29 @@ export default class TransactionList extends Component {
 
   render() {
 
+    var columns = [{class:"date", name:"Date"}, {class:"counterparty", name:"Counterparty Name"},
+                    {class:"payment", name:"Payment type"}, {class:"amount", name:"Amount"}]
+    
     var arrows = {}
-
     arrows[this.props.sortedBy] = this.props.asc ? <span class="arrow-up"></span> : <span class="arrow-down"></span>
 
     return (
       <table className="TransactionList">
         <tr>
-          <th className="date"
-              onClick={this.props.onHeaderClick}
-              style={(this.props.sortedBy === 'date' ? {fontWeight:600} : {})}>
-              Date
-              {arrows.date}
-          </th>
-          <th className="counterparty"
-              onClick={this.props.onHeaderClick}
-              style={(this.props.sortedBy === 'counterparty' ? {fontWeight:600} : {})}>
-              Counterparty Name
-              {arrows.counterparty}
-          </th>
-          <th className="payment"
-              onClick={this.props.onHeaderClick}
-              style={(this.props.sortedBy === 'payment' ? {fontWeight:600} : {})}>
-              Payment Type
-              {arrows.payment}
-          </th>
-          <th className="amount"
-              onClick={this.props.onHeaderClick}
-              style={(this.props.sortedBy === 'amount' ? {fontWeight:600} : {})}>
-              {arrows.amount}              
-              Amount
-          </th>
+          {
+
+            columns.map((col) => {
+
+              return <th className={col.class}
+                          onClick={this.props.onHeaderClick}
+                          style={(this.props.sortedBy === col.class ? {fontWeight:600} : {})}>
+                          {col.name}
+                          {arrows[col.class]}
+                    </th>
+
+            })
+
+          }
           <th className="attachements"><span>📎</span></th>
         </tr>
         {

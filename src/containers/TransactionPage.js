@@ -129,16 +129,22 @@ export default class TransactionPage extends Component {
 
   }
 
+  formatAmount(debit, amount, currency) {
+    return (debit ? '− ' : '+ ') + (Math.abs(amount) + ' ').replace('.',',') + currency
+  }
+
   componentDidMount(){
     this.loadData()
   }
+
+
 
   render() {
 
     var transactions = this.state.transactions.map(function(t, index){
 
-      var amount = (t.debit ? '− ' : '+ ') + (Math.abs(t.amount) + ' ').replace('.',',') + t.currency
-      var gbp = (t.debit ? '− ' : '+ ') + (Math.abs(t.gbp) + ' ').replace('.',',') + " GBP"
+      var amount = this.formatAmount(t.debit, t.amount, t.currency)
+      var gbp = this.formatAmount(t.debit, t.gbp, " GBP")
       var date = new Date(t.created_at).toLocaleDateString().replace(/\//g,'-')
       
       return {
@@ -165,7 +171,7 @@ export default class TransactionPage extends Component {
         if(this.state.selected.includes(t.id)){
           
           let date = new Date(t.created_at).toLocaleDateString()
-          let amount = (t.debit ? '− ' : '+ ') + (Math.abs(t.amount) + ' ').replace('.',',') + t.currency
+          let amount = this.formatAmount(t.debit , t.amount, t.currency)
 
           let d = {
             date          : date,
